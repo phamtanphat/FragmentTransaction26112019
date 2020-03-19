@@ -41,7 +41,14 @@ public class AndroidFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_android, container, false);
         frameLayout = view.findViewById(R.id.frameLayout);
         frameLayout.setBackgroundColor(Color.rgb(new Random().nextInt(256),new Random().nextInt(256),new Random().nextInt(256)));
+        Log.d("BBB","onCreate View");
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d("BBB","onDestroy View");
     }
 
     @Override
